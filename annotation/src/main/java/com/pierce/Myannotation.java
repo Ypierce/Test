@@ -1,5 +1,13 @@
 package com.pierce;
 
-public class Myannotation {
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.TYPE,ElementType.METHOD,ElementType.FIELD})
+public @interface Myannotation {
+    String value() default "属性";
 }
